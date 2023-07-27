@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    flex: 1;
+    /* Allow the logo to take the available space on the left */
+}
+
+.navbar-menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    /* Allow the search field and button to take the available space on the right */
+    justify-content: flex-end;
+    /* Align the items to the right side */
+}
+
+.navbar-search input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.navbar-search button {
+    background: none;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #fff;
+    /* Set the color of the Font Awesome icon */
+    font-size: 20px;
+    /* Adjust the font size if necessary */
+}
+
+.navbar-mobile-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-mobile-menu {
+        display: block;
+    }
+
+    #mobile-menu-list {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #menu-toggle {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #menu-toggle.active+#mobile-menu-list {
+        display: block;
+    }
+}
